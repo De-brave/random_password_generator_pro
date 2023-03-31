@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Random Password Generator for form's password requirement">
+    <meta name="author" content="Godwin Wisdom">
+    <title>Random Password Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    
+
+</head>
+<body>
+
+   <div class="container">
+        <!-- heading and paragraph container -->
+        <div class="heading">
+            <h1>Generate a <span class="loading-text">random password</span></h1>
+            <p>Never use an insecure password again.</p>
+        </div>
+
+        <!-- generate passowrd container -->
+        <div class="generate-password-containner">
+            <button id="generatePassword-btn">Generate password</button>
+            <div class="password-output">
+                <input type="text" id="password">
+                <button id="copy-btn">copy</button>
+            </div>
+        </div>
+
+        <!-- passwordChoice container -->
+        <div class="password-choice">
+
+            <form class="form-control">
+                <label for="p-length">Password Length:</label>
+                <input type="number" id="p-length" value="12" min="8" max="30">
+            </form>
+
+            <form class="form-control">
+                <label for="p-uppercase">Include Uppercase:</label>
+                <input type="checkbox" id="p-uppercase" checked>
+            </form>
+
+            <form class="form-control">
+                <label for="p-lowercase">Include Lowercase:</label>
+                <input type="checkbox" id="p-lowercase">
+            </form>
+
+            <form class="form-control">
+                <label for="p-numbers">Include Numbers:</label>
+                <input type="checkbox" id="p-numbers" >
+            </form>
+
+            <form class="form-control">
+                <label for="p-symbols">Include Symbols:</label>
+                <input type="checkbox" id="p-symbols">
+            </form>
+        </div>
+
+        <!-- Success popUp message container -->
+        <div id="success-pop-overlay">
+            <div class="pop-box-container">
+                <div class="check-container">
+                    <i class="fa-sharp fa-regular fa-circle-check"></i>
+                </div>
+                <div class="popup-message-container">
+                    <h2>COPIED!</h2>
+                    <p>Succesfully</p>
+                </div>
+                <button id="sucsess-btn">OK</button>
+            </div>
+        </div>
+
+        <!-- Error popUp message container -->
+        <div id="error-pop-overlay">
+            <div class="pop-box-container">
+                <div class="check-container">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="popup-message-container">
+                    <h2>EMPTY!</h2>
+                    <p>Please generate password</p>
+                </div>
+                <button id="error-btn">OK</button>
+            </div>
+        </div> 
+
+        <!-- About the author -->
+        <div class="author">
+            Developed by <span><a href="https://twitter.com/Gwisdom944" target="_blank">Godwin Wisdom</a></span>
+        </div>
+   </div>
+    
+    <!-- JavaScript files -->
+    <script src="https://kit.fontawesome.com/c72aee4ca4.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
